@@ -21,8 +21,20 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="liked.html"><i class="fas fa-heart"></i></a></li>
-                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                <li>
+                    <button class="nav-action-btn">
+                        <img src="images/wishlist.png" alt="Wishlist Icon" class="icon" width="25" height="25">
+                        <span class="nav-action-text"></span>
+                        <data class="nav-action-badge" id="wishlist-count" aria-hidden="true">0</data>
+                    </button>
+                </li>
+                <li>
+                    <button class="nav-action-btn">
+                        <img src="images/shopping-cart.png" alt="Cart Icon" class="icon" width="25" height="25">
+                        <span class="nav-action-text"><strong id="basket-total">₹0.00</strong></span>
+                        <data class="nav-action-badge" id="basket-count" aria-hidden="true">0</data>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
@@ -56,18 +68,18 @@
     <section id="products">
         <h2>Our Products</h2>
         <div class="product" id="product1">
-            <img src="images/shirt.jpg" alt="Shirt">
+            <img src="images/shirt.jpg" alt="Shirt" width="250" height="250">
             <h3>Stylish Shirt</h3>
-            <p>$30</p>
-            <button onclick="addToCart('Stylish Shirt', 30)">Add to Cart</button>
-            <button class="like-button" onclick="likeProduct('Stylish Shirt')"><i class="fas fa-heart"></i></button>
+            <p>₹300</p>
+            <button class="cart" onclick="addToCart('Stylish Shirt', 30)">Add to Bag</button>
+            <button class="like-button" onclick="likeProduct('Stylish Shirt')">Add to Wishlist</button>
         </div>
         <div class="product" id="product2">
-            <img src="images/trousers.jpg" alt="Trousers">
+            <img src="images/trouser.jpg" alt="Trousers" width="250" height="250">
             <h3>Comfortable Trousers</h3>
-            <p>$40</p>
-            <button onclick="addToCart('Comfortable Trousers', 40)">Add to Cart</button>
-            <button class="like-button" onclick="likeProduct('Comfortable Trousers')"><i class="fas fa-heart"></i></button>
+            <p>₹400</p>
+            <button class="cart" onclick="addToCart('Comfortable Trousers', 40)">Add to Bag</button>
+            <button class="like-button" onclick="likeProduct('Comfortable Trousers')">Add to Wishlist</button>
         </div>
         <!-- Add more products as needed -->
     </section>
@@ -82,6 +94,25 @@
     <footer>
         <p>&copy; 2025 ClothMart. All rights reserved.</p>
     </footer>
+
+     <!-- Wishlist Modal -->
+     <div id="wishlist-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleWishlist()">&times;</span>
+            <h2>Wishlist</h2>
+            <div id="wishlist-items"></div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleCart()">&times;</span>
+            <h2>Cart</h2>
+            <div id="cart-items"></div>
+            <div id="cart-total"></div>
+        </div>
+    </div>
 
     <script src="js/scripts.js"></script>
 </body>

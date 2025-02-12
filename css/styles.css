@@ -48,6 +48,37 @@ nav ul li a {
     font-size: 1.2rem;
 }
 
+nav ul li button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav-action-btn {
+    position: relative;
+}
+
+.nav-action-btn .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.nav-action-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #DE3163;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+}
+
 section {
     padding: 2rem;
     text-align: center;
@@ -116,16 +147,20 @@ form input, form textarea {
     max-width: 100%;
     margin: auto;
     overflow: hidden;
+    height: 400px; /* Adjust the height as needed */
 }
 
 .banner-slide {
     display: none;
     position: absolute;
     width: 100%;
+    height: 100%;
 }
 
 .banner-slide img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .banner-navigation {
@@ -169,4 +204,80 @@ form input, form textarea {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#wishlist-items, #cart-items {
+    text-align: left;
+}
+
+#cart-total {
+    font-weight: bold;
+    margin-top: 20px;
+}
+.cart {
+    background-color: #CCDF92;
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.cart:hover {
+    background-color: #b5d37c;
+}
+
+.like-button {
+    background-color: #FFEDFA;
+    border: none;
+    color: #DE3163;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #000;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.like-button:hover {
+    background-color: #ffccd5;
 }
