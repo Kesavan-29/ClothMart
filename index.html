@@ -3,22 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClothMart</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Cloth Mart</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.jpg">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
     <header>
-        <h1>ClothMart</h1>
+        
+        <div class="logo-container">
+            <img src="images/logo.jpg" alt="ClothMart Logo" class="logo">
+            <h1>ClothMart</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="liked.html">Liked Products</a></li>
-                <li><a href="cart.html">Cart</a></li>
+                <li><a href="liked.html"><i class="fas fa-heart"></i></a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
             </ul>
         </nav>
     </header>
+
+    <section id="banner">
+        <div class="banner-slide">
+            <img src="images/banner1.jpg" alt="Banner 1">
+        </div>
+        <div class="banner-slide">
+            <img src="images/banner2.jpg" alt="Banner 2">
+        </div>
+        <div class="banner-slide">
+            <img src="images/banner3.jpg" alt="Banner 3">
+        </div>
+        <div class="banner-slide">
+            <img src="images/banner4.jpg" alt="Banner 4">
+        </div>
+        <div class="banner-navigation">
+            <span class="nav-dot" onclick="currentSlide(1)"></span>
+            <span class="nav-dot" onclick="currentSlide(2)"></span>
+            <span class="nav-dot" onclick="currentSlide(3)"></span>
+            <span class="nav-dot" onclick="currentSlide(4)"></span>
+        </div>
+    </section>
 
     <section id="home">
         <h2>Welcome to ClothMart</h2>
@@ -32,22 +60,29 @@
             <h3>Stylish Shirt</h3>
             <p>$30</p>
             <button onclick="addToCart('Stylish Shirt', 30)">Add to Cart</button>
-            <button onclick="likeProduct('Stylish Shirt')">Like</button>
+            <button class="like-button" onclick="likeProduct('Stylish Shirt')"><i class="fas fa-heart"></i></button>
         </div>
         <div class="product" id="product2">
             <img src="images/trousers.jpg" alt="Trousers">
             <h3>Comfortable Trousers</h3>
             <p>$40</p>
             <button onclick="addToCart('Comfortable Trousers', 40)">Add to Cart</button>
-            <button onclick="likeProduct('Comfortable Trousers')">Like</button>
+            <button class="like-button" onclick="likeProduct('Comfortable Trousers')"><i class="fas fa-heart"></i></button>
         </div>
         <!-- Add more products as needed -->
+    </section>
+
+    <section id="video">
+        <h2>Watch Our Latest Fashion Trends</h2>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2025 ClothMart. All rights reserved.</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
