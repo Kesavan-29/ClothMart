@@ -7,20 +7,6 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/x-icon" href="favicon.jpg">
     <script src="js/at.js"></script>
-    <script>
-        adobe.target.getOffer({
-            "mbox": "target-global-mbox",
-            "success": function(offer) {
-            adobe.target.applyOffer({
-                "mbox": "target-global-mbox",
-                "offer": offer
-            });
-            },
-            "error": function(status, error) {
-            console.log('Error:', status, error);
-            }
-        });
-    </script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <script src="https://assets.adobedtm.com/236ca7d75265/efa87e7d8078/launch-62c8a8ebbdaa-development.min.js" async></script>
